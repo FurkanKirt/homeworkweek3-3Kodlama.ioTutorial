@@ -30,6 +30,7 @@ public class CategoryManager {
 				if (categoryName.equals(category.getName())) {
 					throw new Exception("Ayný kategori mevcut");
 				} else {
+					category1.add(category.getName());
 					catagoryDao.add(category);
 					for (Logger logger : loggers) {
 						logger.log(category.getName());
