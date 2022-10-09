@@ -20,7 +20,7 @@ public class CourseManager {
 	}
 
 	public void add(Course course) throws Exception {
-		if (course.getPrice() < 0) {
+		if (course.getPrice() <= 0) {
 			throw new Exception("Ücret çok düþük");
 		} else {
 			if (courses.size() == 0) {

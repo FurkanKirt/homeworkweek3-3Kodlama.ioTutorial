@@ -18,8 +18,8 @@ public class Main {
 		course.setPrice(15);
 
 		Course course2 = new Course();
-		course2.setName("java");
-		course2.setPrice(20);
+		course2.setName("java2");
+		course2.setPrice(0);
 
 		Category category = new Category();
 		category.setName("software");
@@ -34,8 +34,8 @@ public class Main {
 		//categoryManager.add(category2);
 
 		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers);
-		courseManager.add(course2);
 		courseManager.add(course);
+		courseManager.add(course2);
 
 	}
 
