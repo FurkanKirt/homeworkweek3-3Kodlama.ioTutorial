@@ -35,11 +35,13 @@ public class CourseManager {
 					if (string.equals(course.getName())) {
 						throw new Exception("Bu isimde kurs bulunmaktadýr.");
 					} else {
+						courses.add(course.getName());
 						courseDao.add(course);
 						for (Logger logger : loggers) {
 							logger.log(course.getName());
 						}
 					}
+
 				}
 			}
 
