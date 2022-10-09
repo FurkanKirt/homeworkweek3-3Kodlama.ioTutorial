@@ -24,10 +24,14 @@ public class Main {
 		Category category = new Category();
 		category.setName("software");
 
+		Category category2 = new Category();
+		category2.setName("software");
+
 		Logger[] loggers = { new DatabaseLogger(), new FileLogger(), new MailLogger() };
 
 		CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(), loggers);
 		categoryManager.add(category);
+		//categoryManager.add(category2);
 
 		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers);
 		courseManager.add(course2);
